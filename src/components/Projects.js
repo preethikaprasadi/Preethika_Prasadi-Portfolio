@@ -5,19 +5,19 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
-      title: 'Predictive Analytics Model',
-      description: 'Built a machine learning model to predict customer churn using Python and Scikit-learn.',
-      link: 'https://github.com/yourusername/project1',
+      title: 'Heart Disease Prediction',
+      description: 'This project focuses on predicting the likelihood of heart disease using a dataset containing various clinical and demographic features. It implements data preprocessing, model training, evaluation, and hyperparameter tuning using Python and several machine learning libraries.',
+      link: 'https://github.com/preethikaprasadi/heart-disease-prediction',
     },
     {
-      title: 'Data Visualization Dashboard',
-      description: 'Created an interactive dashboard using Tableau to visualize sales data.',
-      link: 'https://github.com/yourusername/project2',
+      title: 'Customer Shopping Behavior Analysis and Revenue Insights',
+      description: 'This project focuses on analyzing customer shopping data to derive meaningful insights and recommendations for improving business strategies. Using Python and popular data analysis libraries, we explore revenue patterns, customer demographics, and shopping behaviors, offering actionable insights for better inventory and marketing management.',
+      link: 'https://github.com/preethikaprasadi/Customer-Shopping-Behavior-Analysis-and-Revenue-Insights',
     },
     {
-      title: 'Full-Stack Web Application',
-      description: 'Developed a React and Node.js app for managing tasks and projects.',
-      link: 'https://github.com/yourusername/project3',
+      title: 'Body Curve Analyzer',
+      description: 'BodyCurve Analyzer is an AI-powered mobile application that analyzes body measurements to determine body shape, offering personalized fitness, fashion, and health recommendations. Users can track their progress and receive tailored insights to achieve their body goals..',
+      link: 'https://github.com/preethikaprasadi/Body-Curve-Analyzer',
     },
   ];
 
