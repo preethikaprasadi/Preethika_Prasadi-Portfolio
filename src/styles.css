@@ -1,7 +1,7 @@
 /* General Styles */
 :root {
-  --primary-color: #2563eb; /* Vibrant blue */
-  --secondary-color: #ef4444; /* Soft red */
+  --primary-color: #323232; /* Vibrant blue */
+  --secondary-color: #bcbaba; /* Soft red */
   --background-color: #f8f9fa; /* Light gray */
   --text-color: #1e293b; /* Dark gray */
   --card-background: #ffffff; /* White */
@@ -350,7 +350,7 @@
   
   /* Footer */
   footer {
-    background-color: var(--card-background);
+    background-color: rgb(0, 0, 0);
     padding: 1rem 0;
     text-align: center;
     box-shadow: var(--shadow);
@@ -359,4 +359,5 @@
   footer p {
     margin: 0;
     font-size: 1rem;
+    color: white;
   }
