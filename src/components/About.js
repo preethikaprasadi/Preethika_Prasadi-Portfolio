@@ -17,12 +17,12 @@ const About = () => {
         whileTap={{ scale: 0.95 }}
       >
         <p>
-          Hi, I'm Preethika Prasadi. I'm a passionate data scientist and software engineer with expertise in machine learning,
-          data analytics, and full-stack web development. I love solving complex problems and building innovative solutions
+          Hi, I'm Preethika Prasadi. I'm a passionate software engineer and data scientist with expertise in full-stack web development, machine learning, and
+          data analytics. I love solving complex problems and building innovative solutions
           that make a difference.
         </p>
         <p>
-          With a strong foundation in programming and data analysis, I enjoy working on projects that challenge me to learn
+          With a strong foundation in programming and machine learning, I enjoy working on projects that challenge me to learn
           and grow. Let's build something amazing together!
         </p>
       </motion.div>
