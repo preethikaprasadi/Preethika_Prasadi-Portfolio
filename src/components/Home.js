@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import myPhoto from '../assets/preethika-photo.jpg'; // Import your photo
+import myPhoto from '../assets/preethika-photo1.jpg'; // Import your photo
 import './Home.css'; // Optional: Add custom styles for the home section
 
 const Home = () => {
@@ -30,20 +30,23 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <h1 className="animate__animated animate__fadeInDown">Welcome to My Portfolio</h1>
+          <h1 className="animate__animated animate__fadeInDown">Preethika Prasadi</h1>
           <p className="animate__animated animate__fadeInUp animate__delay-1s">
-            Hi, I'm Preethika Prasadi. I'm a data scientist and software engineer with expertise in machine learning,
-            data analytics, and full-stack web development. Let's build something amazing together!
+            Software Engineer | Web Developer | <br/>
+            AI & ML Enthusisast
           </p>
-        </motion.div>
-      </div>
-      <motion.div
+          <motion.div
         className="floating"
         animate={{ y: [0, -20, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       >
         🚀
       </motion.div>
+        </motion.div>
+      </div>
+      <>
+      
+      </>
     </motion.div>
   );
 };
