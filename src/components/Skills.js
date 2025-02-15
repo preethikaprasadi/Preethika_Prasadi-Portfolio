@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skills = [
-    { name: 'Data Analytics', description: 'Proficient in Python, SQL, and data visualization tools like Tableau and Power BI.' },
-    { name: 'Machine Learning', description: 'Experience with Scikit-learn, TensorFlow, and PyTorch for building predictive models.' },
-    { name: 'Data Science', description: 'Strong foundation in statistics, data wrangling, and exploratory data analysis.' },
     { name: 'Software Engineering', description: 'Skilled in JavaScript, Python, and software development best practices.' },
     { name: 'Web Development', description: 'Expertise in React, Node.js, and full-stack development.' },
+    { name: 'Machine Learning', description: 'Experience with Scikit-learn, TensorFlow, and PyTorch for building predictive models.' },
+    { name: 'Data Analytics', description: 'Proficient in Python, SQL, and data visualization tools like Tableau and Power BI.' }, 
+    { name: 'Data Science', description: 'Strong foundation in statistics, data wrangling, and exploratory data analysis.' },  
   ];
 
   return (
