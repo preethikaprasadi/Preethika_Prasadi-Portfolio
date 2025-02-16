@@ -816,3 +816,152 @@ floating-icon:nth-child(4) {
     font-size: 16px;
   }
 }
+
+/* Add these fixes to your existing CSS */
+
+/* 1. Reset box-sizing and prevent overflow */
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 2. Fix header for mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  header nav ul li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul li a {
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+  }
+}
+
+/* 3. Fix white space issue */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Apply container to all sections */
+section {
+  padding: 4rem 0;
+}
+
+#home,
+#about,
+#skills,
+#projects,
+#blogs,
+#contact {
+  padding: 4rem 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* 4. Mobile-first grid adjustments */
+.projects-grid,
+.blogs-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid,
+  .blogs-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-grid,
+  .blogs-grid,
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 5. Card adjustments for mobile */
+.card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* 6. Fix floating icons overflow */
+.floating-icons {
+  display: none; /* Hide on mobile */
+}
+
+@media (min-width: 992px) {
+  .floating-icons {
+    display: block; /* Show on desktop */
+  }
+}
+
+/* 7. Ensure all elements stay within viewport */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 8. Home section mobile fixes */
+#home {
+  padding: 2rem 1rem;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+#home p {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+}
+
+/* 9. Footer fix */
+footer {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* 10. Force horizontal containment */
+body > * {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
