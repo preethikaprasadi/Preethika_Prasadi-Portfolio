@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './styles.css';
@@ -54,10 +55,18 @@ function App() {
           <Projects />
         </motion.section>
         <motion.section
-          id="contact"
+          id="blogs"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2 }}
+        >
+          <Blogs />
+        </motion.section>
+        <motion.section
+          id="contact"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 2.5 }}
         >
           <Contact />
         </motion.section>
