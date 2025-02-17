@@ -19,6 +19,15 @@
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
   
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
   body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -26,6 +35,8 @@
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+    width: 100%;
   }
   
   a {
@@ -204,6 +215,7 @@
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: rgb(0, 0, 0);
   text-align: center;
+  justify-content: center;
 }
 
 .skills-grid {
@@ -211,6 +223,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 2rem;
+  justify-content: center;
 }
 
 .skill-card {
@@ -280,7 +293,7 @@
   left: 50%;
 }
 
-floating-icon:nth-child(4) {
+.floating-icon:nth-child(4) {
   top: 20%;
   left: 40%;
 }
@@ -628,160 +641,178 @@ floating-icon:nth-child(4) {
     font-size: 1rem;
     color: rgb(233, 233, 233);
   }
-  /* Add this at the bottom of your CSS file */
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  /* Adjust section padding */
-  section {
-    padding: 3rem 1.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  /* Header adjustments */
-  header nav ul {
-    flex-wrap: wrap;
-    gap: 1rem;
+  @media (max-width: 1200px) {
+    /* Adjust section padding */
+    section {
+      padding: 3rem 1.5rem;
+    }
   }
 
-  header nav ul li {
-    margin: 0 10px;
+  @media (max-width: 992px) {
+    /* Header adjustments */
+    header nav ul {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    header nav ul li {
+      margin: 0 10px;
+    }
+  
+    /* Home section */
+    #home h1 {
+      font-size: 3rem;
+    }
+  
+    #home p {
+      font-size: 1.4rem;
+    }
+  
+    /* Skills grid */
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      
+    }
+  
+    /* Floating icons adjustments */
+    .floating-icons {
+      display: none;
+    }
+  
+    .floating-icon img.logo {
+      width: 50px;
+      height: 50px;
+    }
   }
 
-  /* Home section */
-  #home h1 {
-    font-size: 3rem;
+  @media (max-width: 768px) {
+    /* Base font size adjustment */
+    html {
+      font-size: 14px;
+    }
+  
+    /* Header */
+    #header {
+      justify-content: center;
+      font-size: x-small;
+    }
+    header nav ul {
+      
+      text-align: center;
+      gap: 0.5rem;
+    }
+  
+    /* Home section */
+    #home {
+      min-height: 50vh;
+      padding: 2rem 1rem;
+    }
+  
+    #home h1 {
+      font-size: 2.5rem;
+    }
+  
+    #home p {
+      font-size: 1.2rem;
+    }
+  
+    /* Section headings */
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    /* Cards and grids */
+    .skills-grid,
+    .projects-grid,
+    .blogs-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+  
+    .skill-card,
+    .project-card,
+    .blog-card {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  
+    /* Floating icons adjustments */
+    .floating-icons {
+      display: none; /* Hide floating icons on mobile */
+    }
+  
+    /* Contact section */
+    .contact-links {
+      gap: 1rem;
+    }
+  
+    .contact-link {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  
+    /* Theme toggle */
+    .theme-toggle {
+      bottom: 15px;
+      right: 15px;
+      padding: 8px 12px;
+    }
   }
 
-  #home p {
-    font-size: 1.4rem;
-  }
+  @media (max-width: 560px) {
+    /* Ultra-mobile adjustments */
+    #home h1 {
+      font-size: 2rem;
+    }
+  
+    #home p {
+      font-size: 1rem;
+    }
 
-  /* Skills grid */
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .photo-container {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 50%;
+      height: 50%;
+      
+      box-shadow: var(--shadow);
+    }
+  
+    section {
+      padding: 2rem 1rem;
+    }
+  
+    .skill-card,
+    .project-card,
+    .blog-card {
+      padding: 1rem;
+    }
+  
+    .project-card a,
+    .blog-card a {
+      padding: 0.5rem 0.8rem;
+    }
+  
+    /* Contact links */
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      font-size: x-small;
+    }
+    .contact-link {
+      width: auto;
+      justify-content: center;
+      padding: 0.1rem;
+    }
   }
-
-  /* Floating icons adjustments */
-  .floating-icons {
-    height: 200px;
-    margin-top: 1rem;
-  }
-
-  .floating-icon img.logo {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Base font size adjustment */
-  html {
-    font-size: 14px;
-  }
-
-  /* Header */
-  header nav ul {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
-
-  /* Home section */
-  #home {
-    min-height: 50vh;
-    padding: 2rem 1rem;
-  }
-
-  #home h1 {
-    font-size: 2.5rem;
-  }
-
-  #home p {
-    font-size: 1.2rem;
-  }
-
-  /* Section headings */
-  section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Cards and grids */
-  .skills-grid,
-  .projects-grid,
-  .blogs-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-
-  .skill-card,
-  .project-card,
-  .blog-card {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  /* Floating icons adjustments */
-  .floating-icons {
-    display: none; /* Hide floating icons on mobile */
-  }
-
-  /* Contact section */
-  .contact-links {
-    gap: 1rem;
-  }
-
-  .contact-link {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  /* Theme toggle */
-  .theme-toggle {
-    bottom: 15px;
-    right: 15px;
-    padding: 8px 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Ultra-mobile adjustments */
-  #home h1 {
-    font-size: 2rem;
-  }
-
-  #home p {
-    font-size: 1rem;
-  }
-
-  section {
-    padding: 2rem 1rem;
-  }
-
-  .skill-card,
-  .project-card,
-  .blog-card {
-    padding: 1rem;
-  }
-
-  .project-card a,
-  .blog-card a {
-    padding: 0.5rem 0.8rem;
-  }
-
-  /* Contact links */
-  .contact-link {
-    width: 100%;
-    justify-content: center;
-    padding: 0.8rem;
-  }
-}
-
-/* Tablet landscape optimization */
+  /* Tablet landscape optimization */
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
   #home {
     min-height: 100vh;
@@ -815,153 +846,4 @@ floating-icon:nth-child(4) {
   textarea {
     font-size: 16px;
   }
-}
-
-/* Add these fixes to your existing CSS */
-
-/* 1. Reset box-sizing and prevent overflow */
-html {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  overflow-x: hidden;
-  width: 100%;
-}
-
-/* 2. Fix header for mobile */
-@media (max-width: 768px) {
-  header {
-    padding: 0.5rem 0;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0 1rem;
-  }
-
-  header nav ul li {
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  header nav ul li a {
-    display: block;
-    padding: 0.5rem;
-    width: 100%;
-  }
-}
-
-/* 3. Fix white space issue */
-.container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Apply container to all sections */
-section {
-  padding: 4rem 0;
-}
-
-#home,
-#about,
-#skills,
-#projects,
-#blogs,
-#contact {
-  padding: 4rem 0;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-/* 4. Mobile-first grid adjustments */
-.projects-grid,
-.blogs-grid,
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-  .projects-grid,
-  .blogs-grid,
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 2rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .projects-grid,
-  .blogs-grid,
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* 5. Card adjustments for mobile */
-.card {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/* 6. Fix floating icons overflow */
-.floating-icons {
-  display: none; /* Hide on mobile */
-}
-
-@media (min-width: 992px) {
-  .floating-icons {
-    display: block; /* Show on desktop */
-  }
-}
-
-/* 7. Ensure all elements stay within viewport */
-img, svg, video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 8. Home section mobile fixes */
-#home {
-  padding: 2rem 1rem;
-}
-
-#home h1 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-}
-
-#home p {
-  font-size: 1.2rem;
-  padding: 0 1rem;
-}
-
-/* 9. Footer fix */
-footer {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-
-/* 10. Force horizontal containment */
-body > * {
-  max-width: 100vw;
-  overflow-x: hidden;
 }
